@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IDHL Tech Test — Pet Brand Landing</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="hero">
+  <div class="hero__split">
+    <!-- LEFT (white) -->
+    <div class="hero__left">
+      <div class="header">
+        <div class="header__logo">
+          <img src="images/petlogo.png" alt="BØRK Pet Brand logo" class="header__logo-img" />
+        </div>
+      </div>
+      <main class="hero__main">
+        <h1 class="hero__title">Ornare Vulputate Elit</h1>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.
+        </p>
+      </main>
+    </div>
+    <!-- RIGHT (blue) -->
+    <div class="hero__right">
+      <button class="header__cart-btn" id="cartButton" aria-controls="site-cart" aria-expanded="false">
+        <img src="images/cart.png" alt="Cart" class="header__cart-img" />
+        <span class="sr-only">Open cart</span>
+      </button>
+      <div class="hero__product-wrap">
+        <article class="card card--product">
+          <img class="card__img" src="images/food.png" alt="Natures Menu dog food" />
+          <h2 class="card__title">Natures Menu Dog Food Can Chicken</h2>
+          <div class="card__price">£22.81</div>
+          <button class="btn js-add-to-cart" data-product-id="p1">ADD TO BAG</button>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" tabindex="-1" aria-hidden="true"></div>
+  <div id="loader" class="loader" aria-hidden="true"></div>
+
+  <!-- Cart Sidebar -->
+  <aside id="site-cart" class="cart" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="cart__header">
+      <h3 id="cart-title" class="cart__title">Your Bag</h3>
+      <button class="cart__close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart__body" id="cartBody">
+      <div id="dynamicItems"></div>
+    </div>
+    <div class="cart__footer">
+      <div class="cart__subtotal">Subtotal : £22.81</div>
+      <div class="u-center">
+        <a class="btn btn--block cart__checkout" href="#">PROCEED TO CHECKOUT</a>
+        <button class="btn btn--ghost btn--block cart__continue">CONTINUE SHOPPING</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
